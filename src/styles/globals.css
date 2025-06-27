@@ -12,6 +12,8 @@
     --theme-placeholder-color: #BBC3C2;
     --theme-toggle-color: #163B37;
     --features-icon-color: rgba(22, 59, 55, 1);
+    --active-feature-background-color: rgba(87, 235, 221, 1);
+    --active-feature-icon-color: rgba(255, 255, 255, 1);
 }
 
 [data-theme='dark'] {
@@ -21,6 +23,8 @@
     --theme-placeholder-color: #BBC3C2;
     --theme-toggle-color: #C4E9E5;
     --features-icon-color: rgba(255, 255, 255, 1);
+    --active-feature-background-color: rgba(110, 238, 225, 1);
+    --active-feature-icon-color: rgba(13, 13, 13, 1);
 }
 
 body {

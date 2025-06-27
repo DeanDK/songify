@@ -14,12 +14,12 @@ if (!rootElement) {
 
 createRoot(rootElement).render(
     <React.StrictMode>
-        <ThemeProvider>
-            <Container>
-                <BrowserRouter>
+        <BrowserRouter>
+            <ThemeProvider>
+                <Container>
                     <RoutesEntry />
-                </BrowserRouter>
-            </Container>
-        </ThemeProvider>
+                </Container>
+            </ThemeProvider>
+        </BrowserRouter>
     </React.StrictMode>
 );

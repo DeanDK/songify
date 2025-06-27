@@ -6,6 +6,7 @@ type Theme = "light" | "dark";
 export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 type ThemeProviderProps = {
+    /** * Components to be rendered inside the context */
     children: React.ReactNode;
 };
 

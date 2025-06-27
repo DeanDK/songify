@@ -26,10 +26,15 @@
     height: 55px;
     gap: 23px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .features-item:hover {
     background-color: rgba(87, 235, 221, 0.2);
+}
+
+.features-item.active {
+    background-color: var(--active-feature-background-color);
 }
 
 .icon {
@@ -37,3 +42,11 @@
     fill: var(--features-icon-color);
 }
 
+.active {
+    background-color: var(--active-feature-background-color);
+    color: var(--active-feature-icon-color);
+
+    svg {
+        fill: var(--active-feature-icon-color);
+    }
+}
