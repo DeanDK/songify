@@ -1,0 +1,13 @@
+.wrapper {
+    width: 970px;
+    height: var(--app-height);;
+    background-color: var(--theme-secondary);
+    flex-direction: column;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.icon {
+    width: 24px;
+    height: 25px;
+    fill: white;
+}

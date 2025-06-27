@@ -1,0 +1,39 @@
+.sidebar {
+    width: 230px;
+    height: var(--app-height);;
+    background-color: var(--theme-primary);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    height: 55px;
+    gap: 15px;
+    color: var(--theme-text-color);
+}
+
+.features > *:first-child {
+    margin-top: 68px;
+}
+
+.features-item {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    height: 55px;
+    gap: 23px;
+    cursor: pointer;
+}
+
+.features-item:hover {
+    background-color: rgba(87, 235, 221, 0.2);
+}
+
+.icon {
+    padding: 15px 0 15px 46px;
+    fill: var(--features-icon-color);
+}
+
