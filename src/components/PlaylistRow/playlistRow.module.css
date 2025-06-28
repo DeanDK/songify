@@ -34,12 +34,6 @@
     margin-top: 9px;
     display: flex;
     gap: 22px;
+    cursor: pointer;
 }
 
-.add {
-    height: 15px;
-}
-
-.icon {
-    height: 14px;
-}

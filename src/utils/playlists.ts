@@ -1,9 +1,4 @@
-export type Song = {
-    id: string;
-    title: string;
-    artist: string;
-    duration: string;
-};
+import type {Song} from "../types.ts";
 
 export type Playlist = {
     id: string;

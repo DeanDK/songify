@@ -1,0 +1,25 @@
+.playlist-action-header {
+    display: flex;
+    justify-content: center;
+}
+
+.playlist-action {
+    width: 224px;
+    height: 50px;
+    border-radius: 999px;
+    border: 2px solid #ccc;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--theme-text-color);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playlist:hover {
+    background-color: var(--active-feature-background-color);
+    color: #FFFFFF;
+}

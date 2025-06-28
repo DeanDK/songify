@@ -12,19 +12,6 @@
     fill: white;
 }
 
-.header {
-    display: flex;
-}
-
-.featured-playlist {
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: capitalize;
-    margin-top: 14px;
-    color: var(--theme-text-color);
-    margin-left: 45px;
-}
-
 .recommended {
     font-weight: 700;
     font-size: 20px;
@@ -37,4 +24,18 @@
 .playlist-row {
     margin-top: 34px;
     margin-left: 75px;
+}
+
+.add {
+    height: 15px;
+}
+
+.icon {
+    height: 14px;
+}
+
+.expendable-playlist-wrapper {
+    margin-top: 55px;
+    overflow: hidden;
+    max-height: 290px;
 }

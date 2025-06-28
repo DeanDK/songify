@@ -1,5 +1,5 @@
 import React, {createContext, useEffect, useState} from "react";
-import type {ThemeContextValue} from "../../types.ts";
+import type {ThemeContextValue} from "../types.ts";
 
 type Theme = "light" | "dark";
 
