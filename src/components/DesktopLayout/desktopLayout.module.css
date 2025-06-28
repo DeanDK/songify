@@ -8,4 +8,6 @@
     background-color: var(--theme-secondary);
     flex-direction: column;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    overflow: hidden;
+
 }

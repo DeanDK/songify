@@ -19,6 +19,7 @@ export const SearchBar: React.FC = () => {
                 type="text"
                 placeholder={isActive ? undefined : "Find favorite Songs & Artists"}
                 className={styles.input}
+                readOnly={!isActive}
             />
         </div>
     );
