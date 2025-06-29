@@ -35,7 +35,47 @@
 }
 
 .expendable-playlist-wrapper {
-    margin-top: 55px;
     overflow: hidden;
-    max-height: 290px;
+    max-height: 300px;
+}
+
+.width-335 {
+    width: 335px;
+}
+
+.width-669 {
+    width: 669px;
+}
+
+.width-665 {
+    width: 665px;
+}
+
+.width-170 {
+    width: 170px;
+}
+
+.width-165 {
+    width: 170px;
+}
+
+.height-525 {
+    height: 525px;
+}
+
+.height-344 {
+    height: 344px;
+}
+
+@media (max-width: 768px) {
+    .recommended {
+       margin-left: 35px;
+        margin-top: 24px;
+    }
+
+    .playlist-row {
+        margin-top: 21px;
+        margin-left: 20px;
+    }
+
 }

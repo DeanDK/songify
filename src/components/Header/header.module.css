@@ -10,3 +10,10 @@
     color: var(--theme-text-color);
     margin-left: 45px;
 }
+
+@media (max-width: 768px) {
+    .title {
+        margin-left: 35px;
+        margin-top: 32px;
+    }
+}

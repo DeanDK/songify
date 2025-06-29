@@ -61,3 +61,10 @@
 .input::placeholder {
     color: var(--search-bar-placeholder-color);
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin-left: 20px;
+        max-width: 230px;
+    }
+}

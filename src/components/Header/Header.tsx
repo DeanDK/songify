@@ -6,13 +6,14 @@ import {Toggle} from "../Toggle/Toggle.tsx";
 type Props = {
     children?: React.ReactNode;
     title: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const Header: React.FC<Props> = ({children, title}) => {
+export const Header: React.FC<Props> = ({children, title, onChange}) => {
     return (
         <>
             <div className={styles.header}>
-                <SearchBar />
+                <SearchBar onChange={onChange} />
                 <Toggle />
             </div>
             <div className={styles["title"]}>{title}</div>

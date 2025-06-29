@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./playlists.module.css";
-import {playlists} from "../../utils/playlists.ts";
+import {type Playlist} from "../../utils/playlists.ts";
 
 type Props = {
     onSelect: (id: string) => void;
+    playlists: Playlist[];
 };
 
-export const Playlists: React.FC<Props> = ({onSelect}) => {
+export const Playlists: React.FC<Props> = ({onSelect, playlists}) => {
     return (
         <div className={styles.wrapper}>
             {playlists.map((playlist) => (

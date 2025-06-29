@@ -1,8 +1,8 @@
 .wrapper {
     display: flex;
     color: var(--theme-text-color);
-    margin-top: 32px;
     overflow: hidden;
+    margin-top: 35px;
 }
 
 .playlist-info-wrapper {
@@ -37,3 +37,8 @@
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: 20px;
+    }
+}

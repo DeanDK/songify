@@ -1,19 +1,25 @@
-.wrapper {
+.container {
+    background-color: #e5e5e5;
     display: flex;
+    justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.wrapper {
+    width: 390px;
+    height: var(--app-mobile-height);
+    border-radius: 30px;
+    background-color: var(--theme-secondary);
+    display: flex;
     flex-direction: column;
-    background-color: var(--light-theme-primary);
-    color: var(--light-theme-secondary);
-    border-radius: 1rem 1rem 0 0;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .main {
-    width: 390px;
-    height: var(--app-height);;
-    background-color: var(--theme-secondary);
-    flex-direction: column;
-    border-radius: var(--border-radius) var(--border-radius) var(--border-radius) var(--border-radius);
-    overflow: hidden;
-
+    flex: 1;
+    height: 884px;
 }

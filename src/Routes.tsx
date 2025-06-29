@@ -1,8 +1,9 @@
-import {Routes, Route} from "react-router-dom";
 import React from "react";
-import Songs from "./features/Songs/Songs.tsx";
+import {Routes, Route} from "react-router-dom";
 import {Layout} from "./components/Layout/Layout.tsx";
+import Songs from "./features/Songs/Songs.tsx";
 import Playlist from "./features/Playlists/Playlist.tsx";
+import Favorites from "./features/Favorites/Favorites.tsx";
 
 export const RoutesEntry: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ export const RoutesEntry: React.FC = () => {
             <Routes>
                 <Route path="/songs" element={<Songs />} />
                 <Route path="/playlists" element={<Playlist />} />
-                <Route path="/favorites" element={<div>Favorites</div>} />
+                <Route path="/favorites" element={<Favorites />} />
             </Routes>
         </Layout>
     );

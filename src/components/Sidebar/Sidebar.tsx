@@ -29,7 +29,7 @@ export const Sidebar: React.FC = () => {
                     <span>Playlists</span>
                 </NavLink>
                 <NavLink
-                    to="/favourites"
+                    to="/favorites"
                     className={({isActive}) =>
                         clsx(styles["features-item"], {[styles.active]: isActive})
                     }

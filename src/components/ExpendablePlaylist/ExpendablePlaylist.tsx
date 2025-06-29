@@ -10,18 +10,30 @@ import type {Song} from "../../types.ts";
 type Props = {
     title: string;
     songs: Song[];
-    width: string;
+    widthClassName: string;
+    playlistWidthClassName: string;
+    onSelectPlaylist?: () => void;
 };
 
-export const ExpandablePlaylist: React.FC<Props> = ({title, songs, width}) => {
+export const ExpandablePlaylist: React.FC<Props> = ({
+    title,
+    songs,
+    widthClassName,
+    playlistWidthClassName,
+    onSelectPlaylist
+}) => {
     const [isExpanded, toggle] = useToggle(false);
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.header} onClick={toggle}>
-                <div className={styles.title} style={{width: width}}>
-                    {title}
-                </div>
+            <div
+                className={styles.header}
+                onClick={() => {
+                    onSelectPlaylist?.();
+                    toggle();
+                }}
+            >
+                <div className={clsx(styles.title, playlistWidthClassName)}>{title}</div>
                 <div className={styles.meta}>
                     <span>{songs.length} Songs</span>
                     <ArrowRight className={clsx(styles.arrow, {[styles.rotated]: isExpanded})} />
@@ -40,7 +52,7 @@ export const ExpandablePlaylist: React.FC<Props> = ({title, songs, width}) => {
                         title={song.title}
                         duration={song.duration}
                         actions={[<RemoveIcon />]}
-                        width="190px"
+                        widthClassName={widthClassName}
                     />
                 ))}
             </div>

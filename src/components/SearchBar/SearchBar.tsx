@@ -4,7 +4,11 @@ import styles from "./SearchBar.module.css";
 import SearchIcon from "../../assets/search.svg?react";
 import {useToggle} from "../../hooks/useIsToggle.tsx";
 
-export const SearchBar: React.FC = () => {
+type Props = {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+export const SearchBar: React.FC<Props> = ({onChange}) => {
     const [isActive, toggleActive] = useToggle(false);
 
     return (
@@ -20,6 +24,7 @@ export const SearchBar: React.FC = () => {
                 placeholder={isActive ? undefined : "Find favorite Songs & Artists"}
                 className={styles.input}
                 readOnly={!isActive}
+                onChange={onChange}
             />
         </div>
     );
