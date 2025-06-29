@@ -34,7 +34,7 @@ npm run dev
 ## 💡 Implementation Hacks
 
 - At the very end I started passing some styles directly inline, it is in very few spaces, I had an idea to refactor it later, but couldn't get it done in time.
-- I don't think it pixel perfect, but I tried to be as close as possible.
+- It's definitely not pixel perfect, but I tried to be as close as possible. Time constraint was mostly the issue to keep everything perfect.
 
 
 
