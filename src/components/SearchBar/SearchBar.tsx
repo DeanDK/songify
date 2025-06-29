@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./SearchBar.module.css";
+import styles from "./searchBar.module.css";
 import SearchIcon from "../../assets/search.svg?react";
 import {useToggle} from "../../hooks/useIsToggle.tsx";
 

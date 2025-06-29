@@ -1,7 +1,6 @@
 .wrapper {
     display: flex;
     align-items: center;
-    background-color: var(--theme-secondary);
     margin-top: 27px;
     margin-left: 32px;
     max-width: 750px;

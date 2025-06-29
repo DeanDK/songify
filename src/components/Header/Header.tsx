@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./header.module.css";
 import {SearchBar} from "../SearchBar/SearchBar.tsx";
 import {Toggle} from "../Toggle/Toggle.tsx";
+import {useLocation} from "react-router-dom";
 
 type Props = {
     children?: React.ReactNode;
@@ -10,13 +11,16 @@ type Props = {
 };
 
 export const Header: React.FC<Props> = ({children, title, onChange}) => {
+    const location = useLocation();
+    const isSongsPage = location.pathname === "/songs";
+
     return (
         <>
             <div className={styles.header}>
                 <SearchBar onChange={onChange} />
-                <Toggle />
+                {isSongsPage && <Toggle />}
             </div>
-            <div className={styles["title"]}>{title}</div>
+            <div className={styles.title}>{title}</div>
             {children}
         </>
     );

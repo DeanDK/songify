@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./container.module.css";
 
 type Props = {
-    /** * Content to be rendered inside the layout */
     children: React.ReactNode;
 };
 

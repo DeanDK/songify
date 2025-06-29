@@ -37,6 +37,9 @@
 }
 
 .info {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
     margin-top: 8px;
 }
 

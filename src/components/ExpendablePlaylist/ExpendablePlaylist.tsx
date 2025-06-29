@@ -6,13 +6,17 @@ import RemoveIcon from "../../assets/remove.svg?react";
 import clsx from "clsx";
 import PlaylistRow from "../PlaylistRow/PlaylistRow.tsx";
 import type {Song} from "../../types.ts";
+import {usePlaylists} from "../../hooks/usePlaylist.ts";
+import {useTheme} from "../../hooks";
 
 type Props = {
     title: string;
+    playlistId: string;
     songs: Song[];
     widthClassName: string;
     playlistWidthClassName: string;
     onSelectPlaylist?: () => void;
+    onRemoveSelectedSong?: (playlistId: string, songId: string) => void;
 };
 
 export const ExpandablePlaylist: React.FC<Props> = ({
@@ -20,9 +24,17 @@ export const ExpandablePlaylist: React.FC<Props> = ({
     songs,
     widthClassName,
     playlistWidthClassName,
-    onSelectPlaylist
+    onSelectPlaylist,
+    onRemoveSelectedSong,
+    playlistId
 }) => {
+    const {theme} = useTheme();
     const [isExpanded, toggle] = useToggle(false);
+
+    const {toggleFavorite, playlists} = usePlaylists();
+
+    const playlist = playlists.find((previous) => previous.id === playlistId);
+    const allSongs = playlist?.songs ?? [];
 
     return (
         <div className={styles.wrapper}>
@@ -35,7 +47,7 @@ export const ExpandablePlaylist: React.FC<Props> = ({
             >
                 <div className={clsx(styles.title, playlistWidthClassName)}>{title}</div>
                 <div className={styles.meta}>
-                    <span>{songs.length} Songs</span>
+                    <span>{allSongs.length} Songs</span>
                     <ArrowRight className={clsx(styles.arrow, {[styles.rotated]: isExpanded})} />
                 </div>
             </div>
@@ -51,8 +63,19 @@ export const ExpandablePlaylist: React.FC<Props> = ({
                         artist={song.artist}
                         title={song.title}
                         duration={song.duration}
-                        actions={[<RemoveIcon />]}
+                        actions={[
+                            <RemoveIcon
+                                key="remove"
+                                fill={theme === "dark" ? "#BBC3C2" : "#163B37"}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    onRemoveSelectedSong?.(playlistId, song.id);
+                                }}
+                            />
+                        ]}
                         widthClassName={widthClassName}
+                        favorite={song.favourite}
+                        onToggleFavourite={() => toggleFavorite(song.id)}
                     />
                 ))}
             </div>

@@ -4,13 +4,9 @@ import CloseIcon from "../../assets/close.svg?react";
 import clsx from "clsx";
 
 type Props = {
-    /** * Title of the Modal */
     title: string;
-    /** * Flag to toggle between open and close state */
     visible: boolean;
-    /** * Callback for closing the modal */
     onClose: () => void;
-    /** * Content to be rendered inside the modal */
     children: React.ReactNode;
     modelHeightClassName: string;
 };

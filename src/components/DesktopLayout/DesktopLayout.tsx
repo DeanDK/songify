@@ -3,7 +3,6 @@ import styles from "./DesktopLayout.module.css";
 import {Sidebar} from "../Sidebar/Sidebar.tsx";
 
 type Props = {
-    /** * Content to be rendered inside the layout */
     children: React.ReactNode;
 };
 

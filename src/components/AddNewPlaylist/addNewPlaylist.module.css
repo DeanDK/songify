@@ -1,0 +1,16 @@
+.height-525 {
+    height: 525px;
+}
+
+.width-335 {
+    width: 335px;
+}
+
+.width-170 {
+    width: 170px;
+}
+
+.expendable-playlist-wrapper {
+    overflow: hidden;
+    max-height: 300px;
+}
