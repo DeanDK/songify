@@ -36,5 +36,21 @@ npm run dev
 - At the very end I started passing some styles directly inline, it is in very few spaces, I had an idea to refactor it later, but couldn't get it done in time.
 - It's definitely not pixel perfect, but I tried to be as close as possible. Time constraint was mostly the issue to keep everything perfect.
 
+## 🛠 Implementation Details
+
+### Responsive Design
+A custom `useIsMobile` hook determines screen size and conditionally renders either the `DesktopLayout` or `MobileLayout`. Shared components are reused across both layouts.
+
+###  State & Persistence
+Playlist and song data is managed through a custom `usePlaylists` hook, which reads from and writes to `localStorage`. I did not use any state management for this task.
+
+### Routing
+`react-router` is used to manage navigation between pages (`/songs`, `/playlists`, `/favorites`). A main `Layout` component wraps the route structure to ensure consistent UI across all views.
+
+###  Theme Support
+The app uses a `ThemeProvider` to support both light and dark themes.
+
+### Component Reusability
+Reusable UI components like `Modal`, `Container`, `Layout`, and others are shared with component composition across the project.
 
 
