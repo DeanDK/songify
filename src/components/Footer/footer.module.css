@@ -21,7 +21,6 @@
 .icon-wrapper svg {
     width: 24px;
     height: 24px;
-    opacity: 0.5;
     transition: opacity 0.2s ease;
     fill: currentColor;
 }

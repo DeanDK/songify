@@ -1,69 +1,40 @@
-# React + TypeScript + Vite
+# 🎵 Songify – Music Library App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive music library app built with React and TypeScript, supporting dark/light modes and mobile/desktop layouts.
 
-Currently, two official plugins are available:
+## 📸 Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 💻 Desktop View
 
-## Expanding the ESLint configuration
+![Desktop View](./images/landing-page-desktop.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 📱 Mobile View
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+![Mobile View](./images/landing-page-mobile.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚠️ Challenges Faced
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Usually when I'm doing these types of assigments, I try to setup my project completely from the stretch without bootstraping it with any of the popular tools. I did it as well this time, however, for some reason, Typescript didn't recognize my css file - that is usually fixed by d.ts files, but I just could not get it done this time, so not to lose too much time, I decided to go with Vite to bootstrap - I'm using it for the first time so honestly, I don't really know how it works behind the scenes.
+- Time constraint was the big one
+- Some icons I could not export properly
+- Could not really figure out from the UX how song is added to the playlist, so I decided to add it whenever user expends one of the playlists in the Modal. I started working on Friday evening, so I could not send email to ask.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+ ## 🚧Missing Features (Time Constraint)
+
+- Transitions - many are not done or not done quite the same. I just didn't have time to cover all of it, so I had to choose lesser evil of all, at least from my point of view. Also, to be honest, I haven't written 10 keyframes in the last 3 years, so they would probably take me the most time.
+- Modals - only for Desktop View. 
+
+## 💡 Implementation Hacks
+
+- At the very end I started passing some styles directly inline, it is in very few spaces, I had an idea to refactor it later, but couldn't get it done in time.
+- I don't think it pixel perfect, but I tried to be as close as possible.
+
+
+
