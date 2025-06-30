@@ -30,6 +30,7 @@ npm run dev
 
 - Transitions - many are not done or not done quite the same. I just didn't have time to cover all of it, so I had to choose lesser evil of all, at least from my point of view. Also, to be honest, I haven't written 10 keyframes in the last 3 years, so they would probably take me the most time.
 - Modals - only for Desktop View. 
+- Favorites timestamp
 
 ## 💡 Implementation Hacks
 
